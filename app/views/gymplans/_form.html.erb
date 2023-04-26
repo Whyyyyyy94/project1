@@ -1,0 +1,14 @@
+<%= form_for @gymplan do |f|%>
+    <%= f.label :day%>
+    <%= f.number_field :day%>
+
+    <%= f.label :focus%>
+    <%= f.text_field :focus%>
+
+    <%= f.label :image%>
+    <%= f.url_field :image%>
+
+    <%= f.label :supplement_id%> 1
+    <%= f.select :supplement_id, options_for_select(Supplement.all.map { |s| [s.name, s.id] }), { include_blank: true }, { multiple: true } %>
+    <%= f.submit%>
+<%end%>

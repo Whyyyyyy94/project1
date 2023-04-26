@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+    <%=link_to "All Plans", gymplans_path%>
+    <%=link_to "New Plan", new_gymplan_path%>
+    |
+    <%=link_to "All Exercises", exercises_path%>
+    <%=link_to "New Exercise", new_exercise_path%>
+    |
+    <%=link_to "All Supplements", supplements_path%>
+    <%=link_to "New Supplements", new_supplement_path%>
+    <%= yield %>
+    </div>
+  </body>
+</html>

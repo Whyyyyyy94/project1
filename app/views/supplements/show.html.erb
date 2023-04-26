@@ -1,0 +1,17 @@
+<h1><%=@supplement.name%></h1>
+<ul>
+    <li>Intake directions: <%=@supplement.intakedirection%></li>
+    <li>Effect: <%=@supplement.effects%></li>
+</ul>
+
+<h2> Take for:</h2>
+<% @supplement.gymplans.each do |gymplan|%>
+    <ul>
+    <li><%= link_to gymplan.focus, gymplan%> day</li>
+    </ul>
+<%end%>
+
+<div class="controls">
+    <%=link_to "Edit supplement", edit_supplement_path(@supplement)%>
+    <%=link_to "Delete supplement", @supplement, :method => :delete, :data => { :confirm => 'Are you sure'}%>
+</div>

@@ -1,0 +1,6 @@
+<h1>All supplements</h1>
+<% @supplements.each do |supplement|%>
+    <ul>
+        <li><%=link_to supplement.name, supplement %></li>
+    </ul>
+<%end%>

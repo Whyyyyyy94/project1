@@ -1,0 +1,15 @@
+<h1><%=@exercise.name%></h1>
+<%=image_tag @exercise.image, :class => "feature" if @exercise.image.present?%> 
+<ul>
+    <% if @exercise.gymplan.present?%>
+    <li>Plan: <%= link_to @exercise.gymplan.focus, @exercise.gymplan%> </li>
+    <%end%>
+    <li>Reps: <%=@exercise.reps%></li>
+    <li>Sets: <%=@exercise.sets%></li>
+</ul>
+
+<div class="controls">
+<%= link_to"Edit exercise", edit_exercise_path(@exercise)%>
+<%= link_to"Delete exercise", @exercise, :method => :delete, :data => { :confirm => 'Are you sure'}%>
+
+</div>

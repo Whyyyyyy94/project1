@@ -1,0 +1,22 @@
+<h1>Day <%=@gymplan.day%></h1>
+<h2>Focus of today: <%=@gymplan.focus%> </h2>
+<%= image_tag @gymplan.image, :class => "feature" if @gymplan.image.present?%>
+
+<h2>Exercises</h2>
+<% @gymplan.exercises.each do |exercise|%>
+    <%= link_to image_tag(exercise.image, :class =>'thumb'), exercise%>
+<%end%>
+
+<h2>Supplements</h2>
+<% @gymplan.supplements.each do |supplement|%>
+    <ul>
+    <li><%= link_to supplement.name, supplement%></li>
+    </ul>
+<%end%>
+
+<div class="controls">
+<%= link_to"Edit plan", edit_gymplan_path(@gymplan)%>
+<%= link_to"Delete plan", @gymplan, :method => :delete, :data => { :confirm => 'Are you sure'}%>
+
+</div>
+

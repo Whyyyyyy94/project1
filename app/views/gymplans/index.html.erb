@@ -1,0 +1,9 @@
+<h1>All Plans</h1>
+
+<% @gymplans.each do |plan|%>
+<%= image_tag plan.image, :class => "thumb" if plan.image.present?%>
+    <ul>
+        <li>Day: <%=plan.day%> </li>
+        <li>Focus: <%=link_to plan.focus, plan%> </li>
+    </ul>
+<%end%>
