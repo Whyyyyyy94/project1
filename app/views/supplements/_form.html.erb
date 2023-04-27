@@ -8,5 +8,8 @@
     <%=f.label :effects%>
     <%=f.text_field :effects%>
 
+    <%= f.label :gymplan_id%>
+    <%= f.collection_check_boxes :gymplan_ids, Gymplan.all, :id, :focus%>
+
     <%=f.submit%>
 <%end%>

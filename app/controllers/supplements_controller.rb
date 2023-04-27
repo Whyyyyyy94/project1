@@ -28,6 +28,6 @@ class SupplementsController < ApplicationController
 
 private
 def supplement_params
-    params.require(:supplement).permit(:name, :intakedirection, :effects)
+    params.require(:supplement).permit(:name, :intakedirection, :effects, :gymplan_ids  => [])
 end
 end

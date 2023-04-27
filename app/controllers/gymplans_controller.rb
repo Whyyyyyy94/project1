@@ -30,6 +30,6 @@ class GymplansController < ApplicationController
 
     private
     def gymplan_params
-    params.require(:gymplan).permit(:day, :focus, :image, :supplement_id)
+    params.require(:gymplan).permit(:day, :focus, :image, :supplement_ids => [])
     end
 end

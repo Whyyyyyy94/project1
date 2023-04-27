@@ -8,7 +8,7 @@
     <%= f.label :image%>
     <%= f.url_field :image%>
 
-    <%= f.label :supplement_id%> 1
-    <%= f.select :supplement_id, options_for_select(Supplement.all.map { |s| [s.name, s.id] }), { include_blank: true }, { multiple: true } %>
+    <%= f.label :supplement_id%>
+    <%= f.collection_check_boxes :supplement_ids, Supplement.all, :id, :name%>
     <%= f.submit%>
 <%end%>
