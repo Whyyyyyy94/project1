@@ -1,15 +1,15 @@
 <%= form_for @supplement do |f|%>
-    <%=f.label :name%>
-    <%=f.text_field :name%>
+    <%=f.label :name, :class => 'form-label'%>
+    <%=f.text_field :name, :class => 'form-control'%>
 
-    <%=f.label :intakedirection%>
-    <%=f.text_field :intakedirection%>
+    <%=f.label :intakedirection, "Intake directions", :class => 'form-label'%>
+    <%=f.text_field :intakedirection, :class => 'form-control'%>
 
-    <%=f.label :effects%>
-    <%=f.text_field :effects%>
-
-    <%= f.label :gymplan_id%>
-    <%= f.collection_check_boxes :gymplan_ids, Gymplan.all, :id, :focus%>
-
-    <%=f.submit%>
+    <%=f.label :effects, :class => 'form-label'%>
+    <%=f.text_field :effects, :class => 'form-control'%>
+    </br>
+    <%= f.label :gymplan_id, :class => 'form-label'%> :
+    <%= f.collection_check_boxes :gymplan_ids, Gymplan.all, :id, :focus, :class => 'form-control'%>
+    </br>
+    <%=f.submit :class => 'btn btn-success btn-lg'%>
 <%end%>

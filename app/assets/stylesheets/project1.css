@@ -1,9 +1,14 @@
 .container{
     max-width: 960px;
     margin: 0 auto;
+    color: white;
+
 }
 body {
     background-color: lemonchiffon;
+    background-image: url("https://cdn-wp.thesportsrush.com/2023/01/a1a28e06-rcl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .thumb {
     height: 12em;
@@ -15,3 +20,12 @@ body {
 .label{
     display: block;
 }
+
+a {
+    color: yellow;
+    font-size: 20px
+}
+img {
+    margin: 15px;
+}
+
